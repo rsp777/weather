@@ -19,7 +19,6 @@ public class WeatherService {
 
 	private static final String API_KEY = "f777fa895ebe5cb38334176de19e5693";
 	private static final String API_URL = "http://api.openweathermap.org/data/2.5/weather";
-
 	private final Logger logger = Logger.getLogger(WeatherService.class.getName());
 
 	private final HttpClient httpClient;
