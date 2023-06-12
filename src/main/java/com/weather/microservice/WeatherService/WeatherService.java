@@ -18,33 +18,33 @@ import com.weather.microservice.WeatherInfo.WeatherInfo;
 public class WeatherService {
 
 	private static final String API_KEY = "f777fa895ebe5cb38334176de19e5693";
-    private static final String API_URL = "http://api.openweathermap.org/data/2.5/weather";
+	private static final String API_URL = "http://api.openweathermap.org/data/2.5/weather";
 
-    private final Logger logger = Logger.getLogger(WeatherService.class.getName());
+	private final Logger logger = Logger.getLogger(WeatherService.class.getName());
 
-    private final HttpClient httpClient;
-    private final ObjectMapper objectMapper;
+	private final HttpClient httpClient;
+	private final ObjectMapper objectMapper;
 
-    public WeatherService() {
-        httpClient = HttpClients.createDefault();
-        objectMapper = new ObjectMapper();
-    }
+	public WeatherService() {
+		httpClient = HttpClients.createDefault();
+		objectMapper = new ObjectMapper();
+	}
 
-    public WeatherInfo getWeatherInfo(String city) throws IOException {
-        String url = String.format("%s?q=%s&appid=%s", API_URL, city, API_KEY);
-        logger.info("Rest URL : "+url);
-//        logger.info("API_KEY : "+API_KEY);
-        HttpGet request = new HttpGet(url);
+	public WeatherInfo getWeatherInfo(String city) throws IOException {
+		String url = String.format("%s?q=%s&appid=%s", API_URL, city, API_KEY);
+		logger.info("Inside : " + getClass());
+		logger.info("Rest URL : " + url);
+		HttpGet request = new HttpGet(url);
 
-        HttpResponse response = httpClient.execute(request);
-        HttpEntity entity = response.getEntity();
-        String json = EntityUtils.toString(entity);
+		HttpResponse response = httpClient.execute(request);
+		HttpEntity entity = response.getEntity();
+		String json = EntityUtils.toString(entity);
 
-        WeatherInfo weatherInfo = objectMapper.readValue(json, WeatherInfo.class);
+		WeatherInfo weatherInfo = objectMapper.readValue(json, WeatherInfo.class);
 
-        logger.info("Weather info fetched for " + city);
-        
-        return weatherInfo;
-    }	
-	
+		logger.info("Weather info fetched for " + city);
+
+		return weatherInfo;
+	}
+
 }

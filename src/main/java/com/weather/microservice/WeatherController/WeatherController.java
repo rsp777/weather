@@ -26,11 +26,8 @@ public class WeatherController {
 	}
 
 	@GetMapping("/weather/{city}") 
-//	@RequestMapping(value= "/weather",
-//			params = {"city"},method = RequestMethod.GET)
 	public WeatherInfo getWeather(@PathVariable String city) throws IOException {
 		logger.info("City : "+city);
-		System.out.println("City : "+city);
 		return weatherService.getWeatherInfo(city);
 	}
 
