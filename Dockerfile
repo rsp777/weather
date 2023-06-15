@@ -13,6 +13,6 @@ COPY src ./src
 CMD ["./mvnw", "clean","package","-e"]
 #SHELL [ "cd target" ]
 ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
+COPY ${JAR_FILE} weatherapp-0.0.1-SNAPSHOT.jar
 SHELL [ "ls -ltr" ]
-ENTRYPOINT ["java","-jar","target/app.jar"]
+ENTRYPOINT ["java","-jar","target/weatherapp-0.0.1-SNAPSHOT.jar"]
