@@ -36,7 +36,7 @@ public class WeatherController {
 		return welcome;
 	}
 	
-	@CrossOrigin(origins = "http://localhost:8082")
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
 //	@CrossOrigin(origins = "http://192.168.1.5:8082")
 	@GetMapping("/weather/{city}")
 	public WeatherInfo getWeather(@PathVariable String city) throws IOException {
