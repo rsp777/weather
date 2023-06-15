@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>WeatherApp</title>
+<style>
+.body @media screen and (max-width: 1000px) {
+  .left, .main, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+</style>
+</head>
+<body>
+	<center>
+		<h1>Weather App</h1>
+		<h2>Current Weather</h2>
+		<div class="container">
+			<div class="form-group">
+				<label for="city-input">Enter City:</label> <input type="text"
+					id="city-input" placeholder="E.g., London"
+					onkeypress="search()">
+			</div>
+
+			<br>
+			<button onclick="getWeather()">Get Weather</button>
+			<button onclick="window.location.reload()">Refresh</button>
+			<div id="weather-info"></div>
+		</div>
+	</center>
+	<script>
+	function search() {
+	    if(event.keyCode == 13) {
+	    	getWeather();
+	    }
+	}
+    function getWeather() {
+      const xhr = new XMLHttpRequest();
+      const cityInput = document.getElementById("city-input");
+      const city = cityInput.value;
+	  console.log(city);
+      // Make an API call to retrieve weather data for the city
+      // Replace the URL with your actual API endpoint
+      const url = 'http://192.168.1.5:8081/weather/'+city;
+	  //url.concat(city,url);
+	  console.log(url);
+	  //console.log('http://192.168.1.5:8081/weather/${city}');
+	  xhr.open('GET',url);
+	  xhr.send();
+	  xhr.onload = () =>{
+		  
+		    // we can change the data type to json also by
+		    const data = JSON.parse(xhr.response);
+		    console.log(data);
+		    console.log(data);
+	          const weatherInfo = document.getElementById("weather-info");
+	          console.log(weatherInfo);
+	          weatherInfo.innerHTML = `
+	            <h2>${data.name}</h2>
+	            <p>Temperature: ${data.main.temp}°C</p>
+	            <p>Humidity: ${data.main.humidity}%</p>
+	            <p>Description: ${data.weather[0].description}</p>`;
+		    
+		    
+		};
+
+    }
+  </script>
+</body>
+</html>

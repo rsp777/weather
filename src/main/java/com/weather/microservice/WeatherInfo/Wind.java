@@ -30,4 +30,10 @@ public class Wind {
 		this.gust = gust;
 	}
 
+	@Override
+	public String toString() {
+		return "Wind {speed=" + speed + ", deg=" + deg + ", gust=" + gust + "}";
+	}
+
+	
 }
