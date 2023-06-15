@@ -2,6 +2,8 @@ package com.weather.microservice.WeatherInfo;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class WeatherInfo {
 
 	private Coord coord;

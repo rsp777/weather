@@ -1,5 +1,8 @@
 package com.weather.microservice.WeatherInfo;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Rain {
 
 	private double oneHourRain;
