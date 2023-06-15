@@ -13,6 +13,6 @@ COPY src ./src
 #CMD ["./mvnw", "spring-boot:run"]
 CMD ["./mvnw", "clean","package","-e"]
 ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} weatherapp-0.0.1-SNAPSHOT.jar
-ENTRYPOINT ["java","-jar","weatherapp-0.0.1-SNAPSHOT.jar"]
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-jar","app.jar"]
 EXPOSE 8081
