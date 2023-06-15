@@ -17,4 +17,4 @@ RUN ls -ltr
 #SHELL [ "cd target" ]
 #ARG JAR_FILE=target/*.jar
 #SHELL [ "ls -ltr" ]
-ENTRYPOINT ["java","-jar","weatherapp-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","app.jar"]
