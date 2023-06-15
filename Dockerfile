@@ -13,8 +13,9 @@ COPY src ./src
 #CMD ["./mvnw", "clean","package"]
 RUN ./mvnw clean package
 RUN ls -ltr
-#RUN java -jar weatherapp-0.0.1-SNAPSHOT.jar
+RUN java -jar weatherapp-0.0.1-SNAPSHOT.jar
 #SHELL [ "cd target" ]
 #ARG JAR_FILE=target/*.jar
 #SHELL [ "ls -ltr" ]
-ENTRYPOINT ["java","-jar","app.jar"]
+#ENTRYPOINT ["java","-jar","app.jar"]
+
