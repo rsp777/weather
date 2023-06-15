@@ -11,8 +11,9 @@ COPY src ./src
 #RUN ./mvnw spring-javaformat:apply
 #CMD ["./mvnw", "spring-boot:run"]
 CMD ["./mvnw", "clean","package","-e"]
-SHELL [ "ls -ltr" ]
+
 SHELL [ "pwd" ]
+SHELL [ "ls -ltr" ]
 ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} app.jar
 SHELL [ "pwd" ]
