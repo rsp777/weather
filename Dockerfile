@@ -10,7 +10,7 @@ RUN  ./mvnw dependency:resolve
 COPY src ./src
 #RUN ./mvnw spring-javaformat:apply
 #CMD ["./mvnw", "spring-boot:run"]
-CMD ["./mvnw", "clean","package","-e"]
+#CMD ["./mvnw", "clean","package","-e"]
 ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","app.jar"]
