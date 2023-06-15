@@ -14,5 +14,5 @@ CMD ["./mvnw", "clean","package","-e"]
 SHELL [ "cd target" ]
 ARG JAR_FILE=/*.jar
 COPY ${JAR_FILE} app.jar
-SHELL [ "pwd" ]
+SHELL [ "ls -ltr" ]
 ENTRYPOINT ["java","-jar","app.jar"]
