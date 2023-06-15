@@ -15,4 +15,4 @@ CMD ["./mvnw", "clean","package","-e"]
 ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} weatherapp-0.0.1-SNAPSHOT.jar
 SHELL [ "ls -ltr" ]
-ENTRYPOINT ["java","-jar","target/weatherapp-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","*.jar"]
