@@ -11,7 +11,7 @@ COPY src ./src
 #RUN ./mvnw spring-javaformat:apply
 #CMD ["./mvnw", "spring-boot:run"]
 CMD ["./mvnw", "clean","package","-e"]
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
+ARG JAR_FILE=target/weatherapp-0.0.1-SNAPSHOT.jar
+COPY ${JAR_FILE} weatherapp-0.0.1-SNAPSHOT.jar
 SHELL [ "pwd" ]
-ENTRYPOINT ["java","-jar","app.jar"]
+ENTRYPOINT ["java","-jar","weatherapp-0.0.1-SNAPSHOT.jar"]
