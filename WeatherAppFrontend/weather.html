@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>WeatherApp</title>
+<style>
+@media screen and (max-width: 1000px) {
+  .left, .main, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+.align-h1{
+
+	text-align: center;
+
+}
+.align-h2{
+	text-align: center;
+
+}
+</style>
+<script src="app.js"></script>
+</head>
+<body>
+	<center>
+		<h1 class="align-h1">Weather App</h1>
+		<h2 class="align-h2">Current Weather</h2>
+		<div class="container">
+			<div class="form-group">
+				<label for="city-input">Enter City:</label> <input type="text"
+					id="city-input" placeholder="E.g., London"
+					>
+			</div>
+
+			<br>
+			<button onclick="getWeather()">Get Weather</button>
+			<button onclick="window.location.reload()">Refresh</button>
+
+			<br>
+				<div>
+					<h2 id="city"></h2>
+					<p  id="temp"></script></p>
+					<p  id="humd"></p>
+					<p  id="desc"></p>
+				</div>
+			<div id="weather-info"></div>
+		</div>
+	</center>
+
+</body>
+</html>
