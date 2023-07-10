@@ -1,4 +1,0 @@
-git remote add origin git@github.com:rsp777/weatherapplication.git
-
-git config user.email raspawar007@gmail.com
-git config user.name rsp777

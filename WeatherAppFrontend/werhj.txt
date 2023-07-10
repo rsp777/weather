@@ -1,4 +1,0 @@
-java -Dserver.port=8090 -jar myApplication.jar
-
-
-LAPTOP-18NVM68C
