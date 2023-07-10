@@ -1,0 +1,23 @@
+[INFO ] 2023-06-21 22:25:23.136 [%PARSER_ERROR[application]] c.w.m.WeatherApplication - Starting WeatherApplication using Java 20.0.1 with PID 23376 (C:\Ravindra\weather\weather\WeatherApp\target\classes started by Ravi in C:\Ravindra\weather\weather\WeatherApp)
+[INFO ] 2023-06-21 22:25:23.138 [%PARSER_ERROR[application]] c.w.m.WeatherApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2023-06-21 22:25:23.190 [%PARSER_ERROR[application]] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 2023-06-21 22:25:23.191 [%PARSER_ERROR[application]] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 2023-06-21 22:25:24.282 [%PARSER_ERROR[application]] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+[INFO ] 2023-06-21 22:25:24.291 [%PARSER_ERROR[application]] o.a.c.c.StandardService - Starting service [Tomcat]
+[INFO ] 2023-06-21 22:25:24.292 [%PARSER_ERROR[application]] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+[INFO ] 2023-06-21 22:25:24.346 [%PARSER_ERROR[application]] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2023-06-21 22:25:24.346 [%PARSER_ERROR[application]] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1155 ms
+[WARN ] 2023-06-21 22:25:25.000 [%PARSER_ERROR[application]] o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+[INFO ] 2023-06-21 22:25:25.007 [%PARSER_ERROR[application]] o.s.b.a.e.w.EndpointLinksResolver - Exposing 14 endpoint(s) beneath base path '/actuator'
+[INFO ] 2023-06-21 22:25:25.063 [%PARSER_ERROR[application]] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+[INFO ] 2023-06-21 22:25:25.077 [%PARSER_ERROR[application]] c.w.m.WeatherApplication - Started WeatherApplication in 2.269 seconds (process running for 2.783)
+[INFO ] 2023-06-21 22:25:26.143 [%PARSER_ERROR[application]] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2023-06-21 22:25:26.144 [%PARSER_ERROR[application]] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2023-06-21 22:25:26.145 [%PARSER_ERROR[application]] o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
+[INFO ] 2023-06-21 22:27:46.459 [%PARSER_ERROR[application]] c.w.m.W.WeatherService - API_KEY : f777fa895ebe5cb38334176de19e5693
+[INFO ] 2023-06-21 22:27:46.460 [%PARSER_ERROR[application]] c.w.m.W.WeatherService - WEATHER_API_URL : http://api.openweathermap.org/data/2.5/weather
+[INFO ] 2023-06-21 22:27:46.460 [%PARSER_ERROR[application]] c.w.m.W.WeatherService - Rest URL : http://api.openweathermap.org/data/2.5/weather?q=jaipur&appid=f777fa895ebe5cb38334176de19e5693&units=metric&lang=en
+[INFO ] 2023-06-21 22:27:46.594 [%PARSER_ERROR[application]] c.w.m.W.WeatherService - response inside class com.weather.microservice.WeatherService.WeatherService: HTTP/1.1 200 OK
+[INFO ] 2023-06-21 22:28:54.732 [%PARSER_ERROR[application]] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+[INFO ] 2023-06-21 22:28:54.742 [%PARSER_ERROR[application]] o.a.c.c.StandardService - Stopping service [Tomcat]
+[INFO ] 2023-06-21 22:28:54.743 [%PARSER_ERROR[application]] o.a.c.c.C.[.[.[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'

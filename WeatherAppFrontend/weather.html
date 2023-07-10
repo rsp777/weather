@@ -4,6 +4,24 @@
 <meta charset="UTF-8">
 <title>WeatherApp</title>
 <style>
+@media only screen and (max-device-width: 480px)
+{
+	.float-container {
+    border: 3px solid #fff;
+    padding: 90px;
+	
+}
+
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 20px 90px 190px;
+    border: 2px solid white;
+	border-radius: 1000px;
+	/* vertical-align: middle; */
+	/* margin: 0 px; */
+}  
+}
 @media screen and (max-width: 1000px) {
   .left, .main, .right {
     width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
@@ -18,34 +36,161 @@
 	text-align: center;
 
 }
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+    box-sizing: border-box;
+}
+body {
+    /* margin-left: 0	; */
+    font-family: "Poppins", sans-serif;
+    background-color: linear-gradiet(300deg, #757b87, #909d9d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+input {
+    padding: 1rem;
+    border-radius: 25px;
+    border: none;
+    background-color: #fff;
+    font-family: inherit;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    min-width: 300px;
+    font-size: 1rem;
+}
+input:focus {
+    outline: none;
+}
+.weather {
+    text-align: center;
+    font-size: 2rem;
+}
+.weather h2 {
+    margin-bottom: auto;
+    display: flex;
+    align-items: center;
+} /* .weather img{ transform: scale(2); } */
+
+.my-button{
+    /* Adding the rounded corners */
+    border-radius: 60px;
+
+    border: 2px solid #000;
+    padding: 10px 20px;
+    background: whitesmoke;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.temp1{
+	font-size: x-large;
+}
+.marginleft{
+	margin-right:0px;
+	/* float: left; */
+}
+
+
+.marginright{
+	margin-left:0px;
+	/* float: right; */
+}
+.float-container {
+    border: 3px solid #fff;
+    padding: 100px;
+	
+}
+
+.float-child1 {
+    width: 50%;
+    float: left;
+    padding: 20px 20px 20px;
+    border: 2px solid white;
+	border-radius: 100px;
+	/* vertical-align: middle; */
+	margin: 0 px;
+}
+.float-child2 {
+    width: 50%;
+    float: left;
+    padding: 20px 90px 190px;
+    border: 2px solid white;
+	border-radius: 100px;
+	/* vertical-align: middle; */
+	margin-left: 10 px;
+}  
+.forecast-container {
+  display: flex;
+  /* justify-content: space-between; */
+  /* overflow-x: auto; */
+  /* white-space: nowrap; */
+}
+
+.forecast-item {
+  flex: 0 0 auto;
+  width: 200px;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+}
 </style>
 <script src="app.js"></script>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<center>
-		<h1 class="align-h1">Weather App</h1>
-		<h2 class="align-h2">Current Weather</h2>
+	<h1 text-align="center"class="weather h2">Weather App</h1>
+
+		
+		<!-- <h2 class="weather h2">Current Weather</h2> -->
 		<div class="container">
 			<div class="form-group">
-				<label for="city-input">Enter City:</label> <input type="text"
-					id="city-input" placeholder="E.g., London"
-					>
+				<label for="city-input"></label> 
+				<input class="container" type="text" onkeypress="search(event)" id="city-input" placeholder="E.g., London">
 			</div>
 
 			<br>
-			<button onclick="getWeather()">Get Weather</button>
-			<button onclick="window.location.reload()">Refresh</button>
-
-			<br>
-				<div>
-					<h2 id="city"></h2>
-					<p  id="temp"></script></p>
-					<p  id="humd"></p>
-					<p  id="desc"></p>
-				</div>
-			<div id="weather-info"></div>
+			<button class="my-button" onclick="getWeather()">Get Weather</button>
+			<button class="my-button" onclick="getForecast()">Get Forecast</button>
+            <button class="my-button" onclick="window.location.reload()">Refresh</button>
 		</div>
-	</center>
+		
+			<br>
+			<br>
+			<br>
+			
+				<div class="float-container">
+                    <div id="date_time">
+                        <script>
+                            var date = new Date().toDateString();
+                            var time = new Date().toLocaleTimeString(); 
+                            console.log(date+time);  
+                            document.getElementById("date_time").textContent = date+' '+time;
+                        </script>
+                    </div>
+					<div class="float-child1" >
+						<h2 id="current"></h2>
+						<h2 id="city" ></h2>
+						<p  class="temp1" id="temp"></p>
+						<p  id="humd"></p>
+						<p  id="desc"></p>
+					</div>
+					
+					 <div class="float-child2">
+						<h2 id = "currentF"></h2>
+                        <div id="forecast-container"  class="forecast-container"></div>
+						<!-- <h2 id="city" >vidisha</h2>
+						<p  class="temp1" id="temp">30</p>
+						<p  id="humd">123</p>
+						<p  id="desc">2343</p> -->
+					</div> 
+				</div>
+				
+			<!-- <div id="weather-info"></div> -->
+
+
 
 </body>
 </html>

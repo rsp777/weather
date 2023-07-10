@@ -1,0 +1,1 @@
+package com.weather.microservice.config;
