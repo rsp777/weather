@@ -51,7 +51,8 @@ public class WeatherService {
 			logger.info("Weather fetched for " + weatherInfo.getName());
 			logger.info("Status : " + weatherInfo.getCod());
 			return weatherInfo;
-		} else {
+		} 
+		else {
 			logger.info(weatherInfo.getName());
 		}
 		return weatherInfo;
