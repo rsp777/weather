@@ -68,7 +68,7 @@ public class WeatherService {
 		logger.info("response inside " + getClass() + ": " + response.getStatusLine().getStatusCode());
 		return json;
 	}
-
+	
 	public String encodedCity(String city) {
 //		if (city.matches(".*\\s.*") && city != null) {
 		if (city != null) {
