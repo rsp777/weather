@@ -82,7 +82,5 @@ public class WeatherService {
 			return encodedCity;
 		}
 		return city;
-
 	}
-
 }
