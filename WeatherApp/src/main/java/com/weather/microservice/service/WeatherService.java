@@ -67,14 +67,16 @@ public class WeatherService {
 		return json;
 	}
 
-	public String encodedCity(String city) {
-		if (city.matches(".*\\s.*") && city != null) {
+		public String encodedCity(String city) {
+//		if (city.matches(".*\\s.*") && city != null) {
+		if (city != null) {
 			logger.info("City with space : " + city);
-			Pattern p = Pattern.compile("[\\s]");
-			Matcher mat = p.matcher(city);
-			encodedCity = mat.replaceAll("");
+			String trimmedCity = city.trim();
+			encodedCity = URLEncoder.encode(trimmedCity, StandardCharsets.UTF_8);
+//			Pattern p = Pattern.compile("\\s+");
+//			Matcher mat = p.matcher(city);
+//			encodedCity = mat.replaceAll("");
 			logger.info("City with no space : " + encodedCity);
-
 			return encodedCity;
 		}
 		return city;
