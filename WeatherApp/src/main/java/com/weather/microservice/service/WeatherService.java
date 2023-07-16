@@ -69,7 +69,7 @@ public class WeatherService {
 		return json;
 	}
 
-		public String encodedCity(String city) {
+	public String encodedCity(String city) {
 //		if (city.matches(".*\\s.*") && city != null) {
 		if (city != null) {
 			logger.info("City with space : " + city);
