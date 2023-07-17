@@ -1,5 +1,18 @@
-{"properties": [{
-  "name": "API_KEY",
-  "type": "java.lang.String",
-  "description": "A description for 'API_KEY'"
-}]}
+{"properties": [
+  {
+    "name": "API_KEY",
+    "type": "java.lang.String",
+    "description": "A description for 'API_KEY'"
+  },
+  {
+    "name": "weather.key",
+    "type": "java.lang.String",
+    "description": "A description for 'weather.key'"
+  },
+  {
+    "name": "weather.params",
+    "type": "java.lang.String",
+    "description": "A description for 'weather.params'"
+  }
+]}
+
