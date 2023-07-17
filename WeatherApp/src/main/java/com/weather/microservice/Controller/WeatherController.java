@@ -51,9 +51,6 @@ public class WeatherController {
 		String weatherUrl = config.getUrl();
 		String weatherKey = config.getKey();
 		String weatherParams = config.getParams();
-//		logger.info("Environment Variable : "+System.getenv("ApiKey")+' '+System.getProperty("weather.key"));
-		Map<String, String> env = System.getenv();
-		env.forEach((k, v) -> logger.info(k + ":" + v));//System.out.println(k + ":" + v));
 		weatherInfo = weatherService.getWeatherInfo(city,weatherUrl,weatherKey,weatherParams);
 		logger.info("getWeatherInfo("+city+") : "+weatherInfo);
 		
