@@ -29,11 +29,11 @@ public class Config {
 	private Environment environment;
 	
 	public String getKey() {
-		logger.info("API_KEY fetched");
+		logger.info("API_KEY fetched"+environment.getProperty("weather.key"));
 		return environment.getProperty("weather.key");
 	}
 	public String getUrl() {
-		logger.info("API_URL fetched");
+		logger.info("API_URL fetched"+environment.getProperty("weather.url"));
 		return environment.getProperty("weather.url");
 	}
 	

@@ -66,8 +66,8 @@ public class WeatherService {
 	}
 	
 	public String encodedCity(String city) {
-//		if (city.matches(".*\\s.*") && city != null) {
-		if (city != null) {
+		if (city.matches(".*\\s.*") && city != null) {
+//		if (city != null) {
 			logger.info("City with space : " + city);
 			String trimmedCity = city.trim();
 			encodedCity = URLEncoder.encode(trimmedCity, StandardCharsets.UTF_8);
