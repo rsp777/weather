@@ -30,7 +30,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: docker.io/${{ secrets.AzureAppService_ContainerUsername_3bbbb94dceed4ad582f46c84499022e2 }}/rspp777 / weatherservice:${{ github.sha }}
+        tags: docker.io/${{ secrets.AzureAppService_ContainerUsername_3bbbb94dceed4ad582f46c84499022e2 }}/rspp777/weatherservice:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
