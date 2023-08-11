@@ -22,8 +22,8 @@ jobs:
           java-version: '20'
 
       - name: Build with Maven
-        run: cd WeatherApp && mvn clean install
-
+        run: cd WeatherApp && mvn clean install && ls -ltr && cd target && ls -ltr
+        
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
